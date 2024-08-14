@@ -678,6 +678,10 @@ body.body-lock {
   font-size: 24px;
 }
 
+.paperwork__title {
+  color: red;
+}
+
 .footer {
   background-color: #333;
   color: #fff;

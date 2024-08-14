@@ -1,0 +1,56 @@
+.icon-menu {
+  display: none;
+
+  @media (max-width: 1070px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // display: block;
+    width: 44px;
+    height: 40px;
+    border-radius: 5px;
+    z-index: 5;
+    position: relative;
+    cursor: pointer;
+
+    @media (any-hover: none) {
+      cursor: default;
+    }
+
+    span,
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 30px;
+      height: 2px;
+      background-color: #000;
+      transition: background-color 0.3s, width 0.3s, transform 0.3s, top 0.3s, bottom 0.3s;
+    }
+    &::before {
+			top: 10px;
+		}
+		&::after {
+			bottom: 10px;
+		}
+    // span {
+		// 	top: calc(50% - 1px);
+		// }
+
+    &--open {
+      // background-color: $btn;
+      span {
+				width: 0;
+			}
+      &::before {
+				top: calc(50% - 1px);
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - 1px);
+				transform: rotate(45deg);
+			}
+    }
+
+  }
+}

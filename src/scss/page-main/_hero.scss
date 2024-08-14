@@ -1,0 +1,104 @@
+.hero {
+  background-color: $bg-hero;
+ 
+  // .hero__inner
+  &__inner {
+    padding-top: 143.14px;
+    display: grid;
+    grid-template-columns: 1fr 390px; 
+    grid-template-rows: 562px;
+    padding-right: 84px;
+    position: relative;
+    @media (max-width: 1170px){
+      padding-right: 0;
+    }
+    @media (max-width: 1070px) {
+      align-items: center;
+      padding-top: 100px;
+    }
+    &::before {
+      @extend %pseudo;
+      background: url('../img/hero/bg.png') top left / cover no-repeat;
+      bottom: 0;
+      left: 44%;
+      width: 90%;
+      height: 100%;
+      z-index: 1;
+    }
+    &::after {
+      @extend %pseudo;
+      width: 100vw;
+      height: 100%;
+      left: 120%;
+      background-color: #bccef4;
+    }
+    @media (max-width: $mobile){
+      grid-template-columns: 1fr; 
+      grid-template-rows: 450px;
+      padding-top: 64px;
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__content {
+    max-width: 675px;
+    padding-top: 90px;
+    position: relative;
+    z-index: 2;
+    @media (max-width: 1070px) {
+      padding-top: 0;
+    }
+  }
+
+  &__decor {
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+    @media (max-width: $mobile){
+      background-position: top;
+      position: absolute;
+      height: 80%;
+      width: 390px;
+      // top: 10%;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+      opacity: 0.3;
+    }
+    @media (max-width:$mobileSmall){
+      right: 50%;
+      transform: translate(50%);
+    }
+  }
+
+  &__title {
+    // max-width: 675px;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  // .hero__text
+  &__text {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  // .hero__paragraph
+  &__paragraph {
+    @extend %gilroy-500;
+    font-size: 24px;
+    span {
+      @extend %gilroy-900;
+    }
+  }
+  // .hero__btn
+  &__btn {}
+}
+.btn--accent {
+}

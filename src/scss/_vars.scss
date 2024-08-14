@@ -1,0 +1,68 @@
+//--------breakpoints----------------------
+$pc: 1170px; 
+$tablet: 991.98px; 
+$mobile: 767.98px; 
+$mobileSmall: 479.98px; 
+
+
+
+//--------colors----------------------
+$main: #333;
+
+$bg: #fff;
+$bg-secondary: #F6F6F6;
+$bg-hero: #FAFAFB;
+
+$btn: #f29351;
+$accent: #87b0ee;
+
+//--------fonts----------------------
+%gilroy-400 {
+  font-family: gilroy, Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+%gilroy-500 {
+  font-family: gilroy, Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 500;
+}
+
+%gilroy-600 {
+  font-family: gilroy, Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 600;
+}
+
+%gilroy-700 {
+  font-family: gilroy, Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+%gilroy-900 {
+  font-family: gilroy, Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 900;
+}
+
+//------------------------------
+%svg-color {
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+%pseudo {
+  position: absolute;
+  content: '';
+  display: block;
+}
+
+%pseudo-xy {
+  position: absolute;
+  content: '';
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

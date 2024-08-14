@@ -1,0 +1,8 @@
+phpmailer/
+.DS_Store
+node_modules
+.idea/
+.vscode
+.idea/*
+npm-debug.*
+*.sublime*

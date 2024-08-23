@@ -12,12 +12,14 @@ export function burger () {
     const activeBlock = document.querySelector('.sub-menu-catalog__block--open');
     const subMenuCatalog = document.querySelector('.sub-menu-catalog');
     const subMenuCatalogOpen = document.querySelector('.sub-menu-catalog--open');
+    const header = document.querySelector('.header');
 
     if(targetElement.closest('.icon-menu')) {
       const icon = targetElement.closest('.icon-menu');
       icon.classList.toggle('icon-menu--open');
       hiddenMenu.classList.toggle('header__hidden-menu--active');
       document.body.classList.toggle('body-lock');
+      header.classList.toggle('header-open');
 
       // if (document.documentElement.classList.contains('sub-menu-open'))
       if (subMenuCatalogOpen) {

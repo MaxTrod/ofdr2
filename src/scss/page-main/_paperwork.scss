@@ -1,9 +1,247 @@
 .paperwork {
+  padding-top: 60px;
+  padding-bottom: 70px;
+
+   // .paperwork__advantages
+   &__advantages {
+    margin-top: 70px;
+   }
+
   // .paperwork__inner
   &__inner {}
   // .paperwork__title
   &__title {
-    color: red;
+    margin-bottom: 37px;
+  }
+  // .paperwork__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    @media (max-width:$tablet){
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width:$mobile){
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    @media (max-width:$mobileSmall){
+      grid-template-columns: 1fr;
+    }
+  }
+  // .paperwork__item
+  &__item {
+    text-align: center;
+    box-shadow: 0 7px 30px 0 rgba(0, 0, 0, 0.1);
+    background: $bg;
+    padding: 110px 10px 29px 10px;
+    position: relative;
+    &::before {
+      @extend %pseudo;
+      top: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #86ADEF;
+      @extend %svg-color;
+    }
+    &--civil-defense {
+      &::before {
+        width: 56px;
+        height: 64px;
+        -webkit-mask-image: url('../img/icons.svg#fireman-icon');
+        mask-image: url('../img/icons.svg#fireman-icon');
+      }
+    }
+    &--height-work {
+      &::before {
+        width: 66px;
+        height: 66px;
+        -webkit-mask-image: url('../img/icons.svg#crane-icon');
+        mask-image: url('../img/icons.svg#crane-icon');
+      }
+    }
+    &--road-machinery {
+      &::before {
+        width: 66px;
+        height: 66px;
+        -webkit-mask-image: url('../img/icons.svg#excavator-icon');
+        mask-image: url('../img/icons.svg#excavator-icon');
+      }
+    }
+    &--non-destructive-testing {
+      &::before {
+        width: 67px;
+        height: 67px;
+        -webkit-mask-image: url('../img/icons.svg#settings-icon');
+        mask-image: url('../img/icons.svg#settings-icon');
+      }
+    }
+    &--adr {
+      &::before {
+        width: 73px;
+        height: 66px;
+        -webkit-mask-image: url('../img/icons.svg#toxic-icon');
+        mask-image: url('../img/icons.svg#toxic-icon');
+      }
+    }
+    &--labor-protection {
+      &::before {
+        width: 51px;
+        height: 64px;
+        -webkit-mask-image: url('../img/icons.svg#worker-icon');
+        mask-image: url('../img/icons.svg#worker-icon');
+      }
+    }
+    &--fire-technical-minimum {
+      &::before {
+        width: 42px;
+        height: 70px;
+        -webkit-mask-image: url('../img/icons.svg#extinguisher-icon');
+        mask-image: url('../img/icons.svg#extinguisher-icon');
+      }
+    }
+    &--industrial-safety {
+      &::before {
+        width: 67px;
+        height: 64px;
+        -webkit-mask-image: url('../img/icons.svg#factory-icon');
+        mask-image: url('../img/icons.svg#factory-icon');
+      }
+    }
+    &--education {
+      &::before {
+        width: 62px;
+        height: 70px;
+        -webkit-mask-image: url('../img/icons.svg#engineer-icon');
+        mask-image: url('../img/icons.svg#engineer-icon');
+      }
+    }
+    &--energy-security {
+      &::before {
+        width: 64px;
+        height: 64px;
+        -webkit-mask-image: url('../img/icons.svg#plug-icon');
+        mask-image: url('../img/icons.svg#plug-icon');
+      }
+    }
+    &--traffic-safety {
+      &::before {
+        width: 66px;
+        height: 66px;
+        -webkit-mask-image: url('../img/icons.svg#curve-icon');
+        mask-image: url('../img/icons.svg#curve-icon');
+      }
+    }
+    &--machinery-license {
+      &::before {
+        width: 78px;
+        height: 67px;
+        -webkit-mask-image: url('../img/icons.svg#tracktor-icon');
+        mask-image: url('../img/icons.svg#tracktor-icon');
+      }
+    }
+  }
+  // .paperwork__subtitle
+  &__subtitle {
+    @extend %gilroy-600;
+    font-size: 19px;
   }
 }
+
+
+
+.advantages-paperwork {
+  background-color: $bg-secondary;
+  // .advantages-paperwork__items
+  &__items {
+    padding: 40px 12px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(220px, 240px));
+    column-gap: 15px;
+    row-gap: 40px;
+    justify-content: space-between;
+    @media (max-width:$tablet){
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width:$mobile){
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width:$mobileSmall){
+      grid-template-columns: 1fr;
+    }
+  }
+  // .advantages-paperwork__item
+  &__item {
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  // .advantages-paperwork__icon
+  &__icon {
+    margin-bottom: 15px;
+    width: 98px;
+    height: 98px;
+    border-radius: 50%;
+    border: 1px solid #e8e8e8;
+    background-color: $bg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    &::before {
+      @extend %pseudo;
+      @extend %svg-color;
+      background-color: #86ADEF;
+    }
+    &--time {
+      &::before {
+        width: 37px;
+        height: 48px;
+        -webkit-mask-image: url('../img/icons.svg#document-icon');
+        mask-image: url('../img/icons.svg#document-icon');
+      }
+    }
+    &--quality {
+      &::before {
+        width: 52px;
+        height: 52px;
+        -webkit-mask-image: url('../img/icons.svg#favorites-icon');
+        mask-image: url('../img/icons.svg#favorites-icon');
+      }
+    }
+    &--authentication {
+      &::before {
+        width: 37px;
+        height: 55px;
+        -webkit-mask-image: url('../img/icons.svg#guarantee-icon');
+        mask-image: url('../img/icons.svg#guarantee-icon');
+      }
+    }
+    &--delivery {
+      &::before {
+        width: 58px;
+        height: 28px;
+        -webkit-mask-image: url('../img/icons.svg#delivery-icon');
+        mask-image: url('../img/icons.svg#delivery-icon');
+      }
+    }
+  }
+  // .advantages-paperwork__title
+  &__title {
+    @extend %gilroy-700;
+    font-size: 22px;
+    line-height: 1.22; /* 27/22 */
+    margin-bottom: 12px;
+  }
+  // .advantages-paperwork__text
+  &__text {
+    @extend %gilroy-500;
+    font-size: 17px;
+    line-height: 1.47;
+    max-width: 209px;
+  }
+}
+
+
 

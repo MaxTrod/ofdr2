@@ -139,6 +139,9 @@
 }
 
 .social-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   &__links {
     display: flex;
     flex-direction: column;
@@ -167,6 +170,7 @@
       top: 50%;
       transform: translateY(-50%);
       background-color: $bg;
+      transition: background-color 0.3s;
     }
 
     &--telegram {
@@ -196,6 +200,13 @@
        padding-top: 10px;
        padding-bottom: 10px; 
     }
+    @media (any-hover: hover){
+      &:hover{
+        &::before {
+          background-color: #86AFEF;
+        }
+      }
+    }
   }
 
   // .social-footer__body
@@ -215,6 +226,16 @@
 
   // .social-footer__email
   &__email {}
+  &__phone,
+  &__email { 
+    @media (any-hover: hover){
+      &:hover{
+        &::before {
+          background-color: #86AFEF;
+        }
+      }
+    }
+  }
 
   // .social-footer__btn
   &__btn {

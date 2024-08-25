@@ -4,7 +4,7 @@
 @import 'global';
 @import 'mixins';
 @import 'mixins';
-// @import 'libs';
+@import 'libs/swiper';
 /*--------------------------------------------------*/
 @import 'components/header';
 
@@ -12,7 +12,13 @@
 
 /*--------------------------------------------------*/
 @import 'page-main/hero';
+
 @import 'page-main/paperwork';
 
+
+@import 'page-main/educational';
+
+
+/*--------------------------------------------------*/
 @import 'components/footer';
 

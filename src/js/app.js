@@ -3,6 +3,8 @@ import * as menuCatalog from "./page-main/_menu.js";
 import * as burgerMenu from "./modules/_icon-menu.js";
 import * as dynamicAdapt from "./modules/_dynamic-adapt.js";
 import * as spoilers from "./modules/_spoilers.js";
+import * as swipers from "./modules/_swipers.js";
+import * as groupStatus from "./page-main/_group-status.js";
 
 isWebp.isWebp();
 
@@ -13,6 +15,10 @@ burgerMenu.burger();
 dynamicAdapt.dynamicAdapt();
 
 spoilers.spoilers();
+
+groupStatus.groupStatus();
+
+import "./modules/_swipers.js";
 
 // core version + navigation, pagination modules:
 // import Swiper from 'swiper';

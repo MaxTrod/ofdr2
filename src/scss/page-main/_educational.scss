@@ -1,0 +1,128 @@
+.educational-programs {
+  padding-top: 64px;
+  padding-bottom: 70px;
+  // .educational-programs__inner
+  &__inner {}
+  // .educational-programs__title
+  &__title {
+    margin-bottom: 28px;
+  }
+  // .educational-programs__content
+  &__content {}
+  // .educational-programs__slider
+  &__slider {}
+  // .educational-programs__wrapper
+  &__wrapper {
+    margin-bottom: 37px;
+    box-sizing: border-box;
+    align-items: stretch;
+  }
+  &__slide {
+    // display: flex;
+    
+    
+  }
+  // .educational-programs__pagination
+  &__pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    .swiper-pagination-bullet {
+      cursor: pointer;
+      width: 11px;
+      height: 11px;
+      background-color: #E4E4E4;
+      border-radius: 50%;
+      transition: border 0.3s, width 0.3s, height 0.3s;
+      border: 2px solid transparent;
+    }
+    .swiper-pagination-bullet-active {
+      border: 2px solid #84aaed;
+      width: 14px;
+      height: 14px;
+    }
+  }
+}
+
+.slide-educational {
+  // .slide-educational__card
+  &__card {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.07);
+    background: $bg;
+    transition: box-shadow 0.3s;
+    @media (any-hover: hover){
+      &:hover{
+        box-shadow: none;
+      }
+    }
+  }
+
+  &__img-link {
+    display: block;
+    margin-bottom: 20px;
+  }
+  // .slide-educational__image
+  &__image {
+  }
+  // .slide-educational__title
+  &__title {
+    flex: 1 1 auto
+  }
+  &__link-title {
+    @extend %gilroy-700;
+    font-size: 19px;
+    transition: color 0.3s;
+    @media (any-hover: hover){
+      &:hover{
+        color: $accent;
+      }
+    }
+  }
+  // .slide-educational__info
+  &__info {
+    @extend %gilroy-500;
+    font-size: 16px;
+    // color: #53b43b;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    position: relative;
+    // flex: 1 1 auto;
+    &::before {
+      @extend %pseudo;
+      @extend %svg-color;
+      width: 15px;
+      height: 15px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #53b43b;
+      -webkit-mask-image: url('../img/icons.svg#circle-icon');
+      mask-image: url('../img/icons.svg#circle-icon');
+    }
+    .group-open & {
+      color: #53b43b;
+    }
+    .group-close & {
+      color: red;
+      &::before {
+        background-color: red;
+        -webkit-mask-image: url('../img/icons.svg#email-icon');
+        mask-image: url('../img/icons.svg#email-icon');
+      }
+    }
+  }
+  // .slide-educational__price
+  &__price {
+    @extend %gilroy-700;
+    font-size: 22px;
+  }
+}
+
+

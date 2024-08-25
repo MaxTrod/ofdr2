@@ -1,0 +1,19 @@
+<section class="educational-programs">
+  <div class="container">
+    <div class="educational-programs__inner">
+      <h2 class="educational-programs__title title title--secondary">Образовательные программы</h2>
+      <div class="educational-programs__content">
+        
+        <div class="educational-programs__slider swiper">
+          <div class="educational-programs__wrapper swiper-wrapper">
+
+            @@loop('./_educational-swiper.html', 'files/educational.json')
+
+          </div>
+          <div class="educational-programs__pagination swiper-pagination"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

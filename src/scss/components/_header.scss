@@ -226,6 +226,14 @@
         }
       }
     }
+
+    &--whatsapp,
+    &--viber,
+    &--telegram {
+      &:active {
+        box-shadow: none;
+      }
+    }
   }
 }
 

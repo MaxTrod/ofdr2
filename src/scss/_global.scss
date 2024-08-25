@@ -34,7 +34,7 @@ body {
   transition: 
     box-shadow 0.2s, 
     color 0.2s, 
-    bacground-color 0.2s;
+    background-color 0.2s;
 
   &:focus {
     box-shadow: 0 0 0 2px $accent;
@@ -111,7 +111,6 @@ body {
     padding: 12px 27px;
   }
   
-
   @media (any-hover: hover){
     &:hover{
       box-shadow: 0 8px 18px 0 rgba($btn, 0.9);
@@ -122,6 +121,10 @@ body {
         box-shadow: 0 8px 18px 0 rgba($accent, 0.9);
       }
     }
+  }
+
+  &:active {
+    box-shadow: none;
   }
 }
 

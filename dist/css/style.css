@@ -121,6 +121,7 @@ body {
 }
 
 .footer__copy,
+.slide-educational__info,
 .advantages-paperwork__text,
 .hero__paragraph,
 .bottom-header__link,
@@ -138,6 +139,8 @@ body {
 }
 
 .item-footer__title,
+.slide-educational__price,
+.slide-educational__link-title,
 .advantages-paperwork__title,
 .phone {
   font-family: gilroy, Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -151,6 +154,7 @@ body {
 }
 
 .social-footer__link::before,
+.slide-educational__info::before,
 .advantages-paperwork__icon::before,
 .paperwork__item::before,
 .social-header__link::before,
@@ -165,6 +169,7 @@ body {
 }
 
 .social-footer__link::before,
+.slide-educational__info::before,
 .advantages-paperwork__icon::before,
 .paperwork__item::before,
 .hero__inner::after,
@@ -228,10 +233,10 @@ body.body-lock {
 
 .state {
   border-radius: 3px;
-  -webkit-transition: color 0.2s, bacground-color 0.2s, -webkit-box-shadow 0.2s;
-  transition: color 0.2s, bacground-color 0.2s, -webkit-box-shadow 0.2s;
-  transition: box-shadow 0.2s, color 0.2s, bacground-color 0.2s;
-  transition: box-shadow 0.2s, color 0.2s, bacground-color 0.2s, -webkit-box-shadow 0.2s;
+  -webkit-transition: color 0.2s, background-color 0.2s, -webkit-box-shadow 0.2s;
+  transition: color 0.2s, background-color 0.2s, -webkit-box-shadow 0.2s;
+  transition: box-shadow 0.2s, color 0.2s, background-color 0.2s;
+  transition: box-shadow 0.2s, color 0.2s, background-color 0.2s, -webkit-box-shadow 0.2s;
 }
 
 .state:focus {
@@ -293,6 +298,11 @@ body.body-lock {
 
 .btn--footer {
   padding: 12px 27px;
+}
+
+.btn:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .phone,
@@ -365,6 +375,48 @@ body.body-lock {
 .email--footer::before {
   width: 21px;
   height: 15px;
+}
+
+.swiper {
+  overflow: hidden;
+}
+
+.swiper-initialized {
+  -ms-touch-action: pan-y;
+      touch-action: pan-y;
+}
+
+.swiper-wrapper {
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.swiper-vertical .swiper-wrapper {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.swiper-initialized .swiper-slide {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.swiper-android .swiper-slide,
+.swiper-android .swiper-wrapper {
+  -webkit-transform: translate3d(0px, 0, 0);
+          transform: translate3d(0px, 0, 0);
+}
+
+.swiper-button-lock {
+  display: none !important;
 }
 
 /*--------------------------------------------------*/
@@ -515,6 +567,13 @@ body.body-lock {
   mask-image: url("../img/icons.svg#telegram-icon");
 }
 
+.social-header__link--whatsapp:active,
+.social-header__link--viber:active,
+.social-header__link--telegram:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .contacts-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -646,6 +705,7 @@ body.body-lock {
 /*--------------------------------------------------*/
 
 .hero {
+  overflow: hidden;
   background-color: #FAFAFB;
 }
 
@@ -709,7 +769,6 @@ body.body-lock {
 
 .paperwork {
   padding-top: 60px;
-  padding-bottom: 70px;
 }
 
 .paperwork__advantages {
@@ -930,6 +989,134 @@ body.body-lock {
   line-height: 1.47;
   max-width: 209px;
 }
+
+.educational-programs {
+  padding-top: 64px;
+  padding-bottom: 70px;
+}
+
+.educational-programs__title {
+  margin-bottom: 28px;
+}
+
+.educational-programs__wrapper {
+  margin-bottom: 37px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.educational-programs__pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+}
+
+.educational-programs__pagination .swiper-pagination-bullet {
+  cursor: pointer;
+  width: 11px;
+  height: 11px;
+  background-color: #E4E4E4;
+  border-radius: 50%;
+  -webkit-transition: border 0.3s, width 0.3s, height 0.3s;
+  transition: border 0.3s, width 0.3s, height 0.3s;
+  border: 2px solid transparent;
+}
+
+.educational-programs__pagination .swiper-pagination-bullet-active {
+  border: 2px solid #84aaed;
+  width: 14px;
+  height: 14px;
+}
+
+.slide-educational__card {
+  padding: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.07);
+          box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.07);
+  background: #fff;
+  -webkit-transition: -webkit-box-shadow 0.3s;
+  transition: -webkit-box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
+}
+
+.slide-educational__img-link {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.slide-educational__title {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.slide-educational__link-title {
+  font-size: 19px;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.slide-educational__info {
+  font-size: 16px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.slide-educational__info::before {
+  width: 15px;
+  height: 15px;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: #53b43b;
+  -webkit-mask-image: url("../img/icons.svg#circle-icon");
+  mask-image: url("../img/icons.svg#circle-icon");
+}
+
+.group-open .slide-educational__info {
+  color: #53b43b;
+}
+
+.group-close .slide-educational__info {
+  color: red;
+}
+
+.group-close .slide-educational__info::before {
+  background-color: red;
+  -webkit-mask-image: url("../img/icons.svg#email-icon");
+  mask-image: url("../img/icons.svg#email-icon");
+}
+
+.slide-educational__price {
+  font-size: 22px;
+}
+
+/*--------------------------------------------------*/
 
 .footer {
   background-color: #333;
@@ -1660,6 +1847,15 @@ body.body-lock {
   .social-header__link--telegram:hover {
     -webkit-box-shadow: 0 8px 25px 0 rgba(91, 186, 240, 0.8);
             box-shadow: 0 8px 25px 0 rgba(91, 186, 240, 0.8);
+  }
+
+  .slide-educational__card:hover {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+
+  .slide-educational__link-title:hover {
+    color: #87b0ee;
   }
 
   .social-footer__link:hover::before {

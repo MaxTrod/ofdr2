@@ -5,6 +5,7 @@
 @import 'mixins';
 @import 'mixins';
 @import 'libs/swiper';
+// @import 'libs/popup';
 /*--------------------------------------------------*/
 @import 'components/header';
 
@@ -15,8 +16,14 @@
 
 @import 'page-main/paperwork';
 
-
 @import 'page-main/educational';
+
+
+@import 'node_modules/@fancyapps/ui/dist/carousel/carousel';
+@import 'node_modules/@fancyapps/ui/dist/fancybox/fancybox';
+@import 'page-main/examples';
+
+
 
 
 /*--------------------------------------------------*/

@@ -41,13 +41,13 @@ export const path = {
    rootFolder: rootFolder,
    srcFolder: srcFolder,
    docsFolder: docsFolder,
-   ftp: `test`
+   ftp: `domains/devasmikas.ru/public_html`
 };
 
 
 export const configFTP = {
-	host: "", 
-	user: "", 
-	password: "", 
+	host: "141.8.192.217", 
+	user: "a0944396", 
+	password: "upibadpuri", 
 	parallel: 5  
 }

@@ -29,6 +29,19 @@ body {
   margin: 0 auto;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .state {
   border-radius: 3px;
   transition: 
@@ -96,7 +109,7 @@ body {
   @extend %gilroy-600;
   color: $bg;
   padding: 10px 27px;
-  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, background-color 0.2s, color 0.2s;
 
   &--accent {
     padding: 14px 15px;
@@ -105,6 +118,18 @@ body {
     background: linear-gradient(90deg, #87aff1 0%, #6c80cb 100%, #6c80cb 100%);
     font-size: 16px;
     text-transform: uppercase;
+  }
+
+  &--transparent {
+    border: 2px solid #6d81cc;
+    padding: 14px 15px;
+    width: 225px;
+    @extend %gilroy-700;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #6d81cc;
+    background: transparent;
+    box-shadow: none;
   }
 
   &--footer {
@@ -118,6 +143,13 @@ body {
     }
     &--accent {
       &:hover{
+        box-shadow: 0 8px 18px 0 rgba($accent, 0.9);
+      }
+    }
+    &--transparent {
+      &:hover {
+        background-color: #6d81cc;
+        color: $bg;
         box-shadow: 0 8px 18px 0 rgba($accent, 0.9);
       }
     }

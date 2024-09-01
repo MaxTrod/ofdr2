@@ -1,0 +1,275 @@
+.electrical-safety {
+  padding-bottom: 35px;
+
+  // .electrical-safety__inner
+  &__inner {}
+
+  // .electrical-safety__banner
+  &__banner {
+    margin-bottom: 32px;
+  }
+
+  // .electrical-safety__info
+  &__info {}
+}
+
+.container {}
+
+.banner-safery {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center right;
+  min-height: 376px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    display: block;
+    background: url('../img/electrical-safety/decor.png') 0 0 / cover no-repeat;
+    height: 100%;
+    width: 32%;
+    top: 0;
+    right: 0;
+    z-index: 2;
+  }
+  @media (max-width:$mobile){
+    background-position: center;
+  }
+  @media (max-width: 576px){
+    background-position: left;
+    &::before {
+      display: none;
+    }
+  }
+  @media (max-width:$mobileSmall) {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  // .banner-safery__body
+  &__body {
+    padding: 34px 49px 34px 37px;
+    display: grid;
+    grid-template-columns: auto 1fr 300px;
+    align-items: center;
+    column-gap: 15px;
+
+    @media (max-width:$pc) {
+      grid-template-columns: auto 1fr;
+      // justify-content: space-between;
+    }
+
+    @media (max-width:$mobile) {
+      grid-template-columns: 1fr;
+      row-gap: 20px;
+      padding: 15px 15px;
+    }
+
+    @media (max-width:$mobileSmall) {}
+  }
+
+  // .banner-safery__info
+  &__info {
+    margin-right: 60px;
+
+    @media (max-width:$pc) {
+      position: relative;
+      z-index: 4;
+    }
+
+    @media (max-width:$tablet) {
+      margin-right: 30px;
+    }
+
+    @media (max-width:$mobile) {
+      order: 2;
+    }
+  }
+
+  &__info-body {
+    max-width: 188px;
+  }
+
+  // .banner-safery__block
+  &__block {
+    text-align: center;
+
+    p {
+      @extend %gilroy-500;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    span {
+      @extend %gilroy-700;
+      // line-height: 1;
+    }
+
+    &--1 {
+      span {
+        display: inline-block;
+        color: $accent;
+        @extend %gilroy-700;
+        font-size: 36px;
+        position: relative;
+
+        &::after {
+          @extend %pseudo;
+          background-color: $accent;
+          height: 2px;
+          bottom: 0;
+          width: 100%;
+        }
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &--2 {
+      margin-bottom: 15px;
+    }
+
+    &--3 {
+      margin-bottom: 25px;
+    }
+  }
+
+  // .banner-safery__btn
+  &__btn {
+    width: 188px;
+  }
+
+  // .banner-safery__textblock
+  &__textblock {
+    @media (max-width:$pc) {
+      position: relative;
+      z-index: 4;
+    }
+
+    @media (max-width:$mobile) {
+      order: 1;
+    }
+  }
+
+  // .banner-safery__image
+  &__image {
+    width: 300px;
+    height: 214px;
+    position: relative;
+    z-index: 3;
+
+    @media (max-width:$pc) {
+      position: absolute;
+      right: 50px;
+      opacity: 0.7;
+    }
+
+    @media (max-width:$mobile) {
+      display: none;
+    }
+  }
+}
+
+.textblock-safety {
+
+  // padding-top: 27px;
+  // .textblock-safety__title
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  // .textblock-safety__text
+  &__text {
+    max-width: 500px;
+    @extend %gilroy-500;
+    font-size: 17px;
+    line-height: 1.53;
+  }
+}
+
+
+
+.info-safety {
+  h2 {
+    @extend %gilroy-700;
+    font-size: 24px;
+    line-height: 1.2;
+
+    /* 29/24 */
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  h3 {
+    @extend %gilroy-700;
+    font-size: 19px;
+    line-height: 1.26;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  ul {
+    display: grid;
+    gap: 8px;
+    padding-left: 58px;
+    @media (max-width:$mobile){
+      padding-left: 30px;
+    }
+    @media (max-width:$mobileSmall){
+      padding-left: 0;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      column-gap: 14px;
+
+      &:before {
+        content: '';
+        flex: 0 0 9px;
+        width: 9px;
+        height: 9px;
+        background-color: $accent;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  // .info-safety__block
+  &__block {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &--1 {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+
+    &--2 {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &--3 {}
+  }
+
+  // .info-safety__text
+  &__text {
+    p {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

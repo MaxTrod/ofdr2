@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/components/_head.html', {
+"title" : "страница аттестации"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('html/components/_header.html', {
+    "page": "secondary"
+    })
+
+    <main class="page">
+      <div class="page__navigation">
+        <div class="container">
+          <nav class="page__breadcrumbs breadcrumbs">
+            <ul class="breadcrumbs__list">
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="#">Главная</a>
+              </li>
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="#">Аттестация</a>
+              </li>
+              <li class="breadcrumbs__item">
+                <span class="breadcrumbs__current">Аттестация по электробезопасности</span>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      @@include('html/page-certification/_electrical-safety.html', {})
+      @@include('html/components/_guarantees.html', {})
+    </main>
+
+    @@include('html/components/_footer.html', {})
+  </div>
+  @@include('html/components/_js.html')
+</body>
+
+</html>

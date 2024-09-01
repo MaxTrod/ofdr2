@@ -20,6 +20,16 @@ body {
 
 .page {
   flex: 1 1 auto;
+    // .page__navigation
+    &__navigation {
+      padding-top: 143px;
+      @media (max-width: 1070px){
+        padding-top: 100px;
+      }
+      @media (max-width:$mobile){
+        padding-top: 80px;
+      }
+    }
 }
 
 .container {
@@ -41,6 +51,64 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+
+.breadcrumbs {
+  padding: 30px 0;
+  @media (max-width:$mobile){
+    padding: 15px 0;
+  }
+  // .breadcrumbs__list
+  &__list {
+    display: flex;
+    gap: 16px;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  // .breadcrumbs__item
+  &__item {
+    flex: 0 0 auto;
+    @extend %gilroy-500;
+    font-size: 15px;
+    position: relative;
+    &:not(:last-child) {
+      &::before {
+        @extend %pseudo;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -10px;
+        width: 5px;
+        height: 1px;
+        background-color: $accent;
+      } 
+    }
+    @media (max-width:$mobile){
+       &:nth-child(2) {
+        display: none;
+       } 
+    }
+  }
+  // .breadcrumbs__link
+  &__link {
+    text-decoration-color: $accent;
+    color: $accent;
+    @media (max-width:$mobile){
+       padding: 12px 0;
+    }
+    @media (any-hover: hover){
+      &:hover{
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+      }
+    }
+  }
+  // .breadcrumbs__current
+  &__current {
+    color: #7d7d7d;
+    text-decoration-color: #7d7d7d;
+  }
+}
+
 
 .state {
   border-radius: 3px;

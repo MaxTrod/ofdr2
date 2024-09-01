@@ -1,0 +1,104 @@
+.guarantees {
+  background-color: $bg-secondary;
+  &__inner {
+    padding: 40px 12px;
+  }
+  &__title {
+    margin-bottom: 52px;
+  }
+  // .guarantees__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(220px, 240px));
+    column-gap: 15px;
+    row-gap: 40px;
+    justify-content: space-between;
+    @media (max-width:$tablet){
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width:$mobile){
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width:$mobileSmall){
+      grid-template-columns: 1fr;
+    }
+  }
+  // .guarantees__item
+  &__item {
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  // .guarantees__icon
+  &__icon {
+    margin-bottom: 15px;
+    width: 98px;
+    height: 98px;
+    border-radius: 50%;
+    border: 1px solid #e8e8e8;
+    background-color: $bg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    &::before {
+      // @extend %pseudo;
+      // @extend %svg-color;
+      // background-color: #86ADEF;
+    }
+    &--time {
+      background-size: 37px 48px;
+      &::before {
+        // width: 37px;
+        // height: 48px;
+        // -webkit-mask-image: url('../img/icons.svg#document-icon');
+        // mask-image: url('../img/icons.svg#document-icon');
+      }
+    }
+    &--quality {
+      background-size: 52px 52px;
+      &::before {
+        // width: 52px;
+        // height: 52px;
+        // -webkit-mask-image: url('../img/icons.svg#favorites-icon');
+        // mask-image: url('../img/icons.svg#favorites-icon');
+      }
+    }
+    &--authentication {
+      background-size: 37px 55px;
+      &::before {
+        // width: 37px;
+        // height: 55px;
+        // -webkit-mask-image: url('../img/icons.svg#guarantee-icon');
+        // mask-image: url('../img/icons.svg#guarantee-icon');
+      }
+    }
+    &--delivery {
+      background-size: 58px 28px;
+      &::before {
+        // width: 58px;
+        // height: 28px;
+        // -webkit-mask-image: url('../img/icons.svg#delivery-icon');
+        // mask-image: url('../img/icons.svg#delivery-icon');
+      }
+    }
+  }
+  // .guarantees__title
+  &__label {
+    @extend %gilroy-700;
+    font-size: 22px;
+    line-height: 1.22; /* 27/22 */
+    margin-bottom: 12px;
+  }
+  // .guarantees__text
+  &__text {
+    @extend %gilroy-500;
+    font-size: 17px;
+    line-height: 1.47;
+    max-width: 209px;
+  }
+}

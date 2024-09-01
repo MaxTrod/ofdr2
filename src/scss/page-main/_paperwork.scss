@@ -35,108 +35,124 @@
     background: $bg;
     padding: 110px 10px 29px 10px;
     position: relative;
+
+    background-repeat: no-repeat;
+    background-position: center 32px;
+    
     &::before {
-      @extend %pseudo;
-      top: 32px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: #86ADEF;
-      @extend %svg-color;
+      // @extend %pseudo;
+      // top: 32px;
+      // left: 50%;
+      // transform: translateX(-50%);
+      // background-color: #86ADEF;
+      // @extend %svg-color;
     }
     &--civil-defense {
+      background-size: 64px 64px;
       &::before {
-        width: 56px;
-        height: 64px;
-        -webkit-mask-image: url('../img/icons.svg#fireman-icon');
-        mask-image: url('../img/icons.svg#fireman-icon');
+        // width: 56px;
+        // height: 64px;
+        // -webkit-mask-image: url('../img/icons.svg#fireman-icon');
+        // mask-image: url('../img/icons.svg#fireman-icon');
       }
     }
     &--height-work {
+      background-size: 66px 66px;
       &::before {
-        width: 66px;
-        height: 66px;
-        -webkit-mask-image: url('../img/icons.svg#crane-icon');
-        mask-image: url('../img/icons.svg#crane-icon');
+        // width: 66px;
+        // height: 66px;
+        // -webkit-mask-image: url('../img/icons.svg#crane-icon');
+        // mask-image: url('../img/icons.svg#crane-icon');
       }
     }
     &--road-machinery {
+      background-size: 66px 66px;
       &::before {
-        width: 66px;
-        height: 66px;
-        -webkit-mask-image: url('../img/icons.svg#excavator-icon');
-        mask-image: url('../img/icons.svg#excavator-icon');
+        // width: 66px;
+        // height: 66px;
+        // -webkit-mask-image: url('../img/icons.svg#excavator-icon');
+        // mask-image: url('../img/icons.svg#excavator-icon');
       }
     }
     &--non-destructive-testing {
+      background-size: 67px 67px;
       &::before {
-        width: 67px;
-        height: 67px;
-        -webkit-mask-image: url('../img/icons.svg#settings-icon');
-        mask-image: url('../img/icons.svg#settings-icon');
+        // width: 67px;
+        // height: 67px;
+        // -webkit-mask-image: url('../img/icons.svg#settings-icon');
+        // mask-image: url('../img/icons.svg#settings-icon');
       }
     }
     &--adr {
+      background-size: 73px 66px;
       &::before {
-        width: 73px;
-        height: 66px;
-        -webkit-mask-image: url('../img/icons.svg#toxic-icon');
-        mask-image: url('../img/icons.svg#toxic-icon');
+        // width: 73px;
+        // height: 66px;
+        // -webkit-mask-image: url('../img/icons.svg#toxic-icon');
+        // mask-image: url('../img/icons.svg#toxic-icon');
       }
     }
     &--labor-protection {
+      background-size: 51px 64px;
       &::before {
-        width: 51px;
-        height: 64px;
-        -webkit-mask-image: url('../img/icons.svg#worker-icon');
-        mask-image: url('../img/icons.svg#worker-icon');
+        // width: 51px;
+        // height: 64px;
+        // -webkit-mask-image: url('../img/icons.svg#worker-icon');
+        // mask-image: url('../img/icons.svg#worker-icon');
       }
     }
     &--fire-technical-minimum {
+      background-size: 42px 70px;
       &::before {
-        width: 42px;
-        height: 70px;
-        -webkit-mask-image: url('../img/icons.svg#extinguisher-icon');
-        mask-image: url('../img/icons.svg#extinguisher-icon');
+        // width: 42px;
+        // height: 70px;
+        // -webkit-mask-image: url('../img/icons.svg#extinguisher-icon');
+        // mask-image: url('../img/icons.svg#extinguisher-icon');
       }
     }
     &--industrial-safety {
+      background-size: 67px 64px;
       &::before {
-        width: 67px;
-        height: 64px;
-        -webkit-mask-image: url('../img/icons.svg#factory-icon');
-        mask-image: url('../img/icons.svg#factory-icon');
+        // width: 67px;
+        // height: 64px;
+        // -webkit-mask-image: url('../img/icons.svg#factory-icon');
+        // mask-image: url('../img/icons.svg#factory-icon');
       }
     }
     &--education {
+      background-size: 62px 70px;
       &::before {
-        width: 62px;
-        height: 70px;
-        -webkit-mask-image: url('../img/icons.svg#engineer-icon');
-        mask-image: url('../img/icons.svg#engineer-icon');
+        // width: 62px;
+        // height: 70px;
+        // -webkit-mask-image: url('../img/icons.svg#engineer-icon');
+        // mask-image: url('../img/icons.svg#engineer-icon');
       }
     }
     &--energy-security {
+      background-size: 64px 64px;
       &::before {
-        width: 64px;
-        height: 64px;
-        -webkit-mask-image: url('../img/icons.svg#plug-icon');
-        mask-image: url('../img/icons.svg#plug-icon');
+        // width: 64px;
+        // height: 64px;
+        // -webkit-mask-image: url('../img/icons.svg#plug-icon');
+        // mask-image: url('../img/icons.svg#plug-icon');
       }
     }
     &--traffic-safety {
+      background-size: 66px 66px;
       &::before {
-        width: 66px;
-        height: 66px;
-        -webkit-mask-image: url('../img/icons.svg#curve-icon');
-        mask-image: url('../img/icons.svg#curve-icon');
+        // width: 66px;
+        // height: 66px;
+        // -webkit-mask-image: url('../img/icons.svg#curve-icon');
+        // mask-image: url('../img/icons.svg#curve-icon');
       }
     }
     &--machinery-license {
+      background-size: 78px 67px;
       &::before {
-        width: 78px;
-        height: 67px;
-        -webkit-mask-image: url('../img/icons.svg#tracktor-icon');
-        mask-image: url('../img/icons.svg#tracktor-icon');
+        // width: 78px;
+        // height: 67px;
+        // -webkit-mask-image: url('../img/icons.svg#tracktor-icon');
+        // mask-image: url('../img/icons.svg#tracktor-icon');
       }
     }
   }
@@ -188,41 +204,48 @@
     align-items: center;
     justify-content: center;
     position: relative;
+
+    background-repeat: no-repeat;
+    background-position: center;
     &::before {
-      @extend %pseudo;
-      @extend %svg-color;
-      background-color: #86ADEF;
+      // @extend %pseudo;
+      // @extend %svg-color;
+      // background-color: #86ADEF;
     }
     &--time {
+      background-size: 37px 48px;
       &::before {
-        width: 37px;
-        height: 48px;
-        -webkit-mask-image: url('../img/icons.svg#document-icon');
-        mask-image: url('../img/icons.svg#document-icon');
+        // width: 37px;
+        // height: 48px;
+        // -webkit-mask-image: url('../img/icons.svg#document-icon');
+        // mask-image: url('../img/icons.svg#document-icon');
       }
     }
     &--quality {
+      background-size: 52px 52px;
       &::before {
-        width: 52px;
-        height: 52px;
-        -webkit-mask-image: url('../img/icons.svg#favorites-icon');
-        mask-image: url('../img/icons.svg#favorites-icon');
+        // width: 52px;
+        // height: 52px;
+        // -webkit-mask-image: url('../img/icons.svg#favorites-icon');
+        // mask-image: url('../img/icons.svg#favorites-icon');
       }
     }
     &--authentication {
+      background-size: 37px 55px;
       &::before {
-        width: 37px;
-        height: 55px;
-        -webkit-mask-image: url('../img/icons.svg#guarantee-icon');
-        mask-image: url('../img/icons.svg#guarantee-icon');
+        // width: 37px;
+        // height: 55px;
+        // -webkit-mask-image: url('../img/icons.svg#guarantee-icon');
+        // mask-image: url('../img/icons.svg#guarantee-icon');
       }
     }
     &--delivery {
+      background-size: 58px 28px;
       &::before {
-        width: 58px;
-        height: 28px;
-        -webkit-mask-image: url('../img/icons.svg#delivery-icon');
-        mask-image: url('../img/icons.svg#delivery-icon');
+        // width: 58px;
+        // height: 28px;
+        // -webkit-mask-image: url('../img/icons.svg#delivery-icon');
+        // mask-image: url('../img/icons.svg#delivery-icon');
       }
     }
   }

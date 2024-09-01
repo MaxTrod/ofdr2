@@ -1,50 +1,66 @@
 [
   {
+    "id": "educational program 1",
     "dataOpen": "open",
     "img": "01",
     "title": "Пожарно-технический минимум (учреждения-офисы, организации)",
+    "url" : "#",
     "price": "2500"
   },
   {
+    "id": "educational program 2",
     "dataOpen": "open",
     "img": "02",
     "title": "Техническо-пожарный минимум",
+    "url" : "#",
     "price": "3000"
   },
   {
+    "id": "educational program 3",
     "dataOpen": "open",
     "img": "03",
     "title": "Пожарно-технический минимум (учреждения-офисы, организации)",
+    "url" : "#",
     "price": "3500"
   },
   {
+    "id": "educational program 4",
     "dataOpen": "open",
     "img": "04",
     "title": "Техническо-пожарный минимум",
+    "url" : "#",
     "price": "4000"
   },
   {
+    "id": "educational program 1",
     "dataOpen": "close",
     "img": "01",
     "title": "Пожарно-технический минимум (учреждения-офисы, организации)",
+    "url" : "#",
     "price": "4500"
   },
   {
+    "id": "educational program 2",
     "dataOpen": "close",
     "img": "02",
     "title": "Техническо-пожарный минимум",
+    "url" : "#",
     "price": "5000"
   },
   {
+    "id": "educational program 3",
     "dataOpen": "close",
     "img": "03",
     "title": "Пожарно-технический минимум (учреждения-офисы, организации)",
+    "url" : "#",
     "price": "5500"
   },
   {
+    "id": "educational program 4",
     "dataOpen": "close",
     "img": "04",
     "title": "Техническо-пожарный минимум",
+    "url" : "#",
     "price": "6000"
   }
 ]

@@ -166,28 +166,38 @@
 
   // .social-header__link
   &__link {
-    display: inline-block;
     width: 100%;
     height: 100%;
     border-radius: 50%;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    &::before {
-      @extend %pseudo-xy;
-      @extend %svg-color;
+    svg {
       width: 19px;
       height: 19px;
-      background-color: $bg;
+      path {
+        fill: $bg;
+      }
+    }
+
+    &::before {
+      // @extend %pseudo-xy;
+      // @extend %svg-color;
+      // width: 19px;
+      // height: 19px;
+      // background-color: $bg;
     }
 
     &--whatsapp {
       background-color: #2dd038;
       box-shadow: 0 8px 25px 0 rgba(45, 208, 56, 0.5);
 
-      &::before {
-        -webkit-mask-image: url('../img/icons.svg#whatsapp-icon');
-        mask-image: url('../img/icons.svg#whatsapp-icon');
-      }
+      // &::before {
+      //   -webkit-mask-image: url('../img/icons.svg#whatsapp-icon');
+      //   mask-image: url('../img/icons.svg#whatsapp-icon');
+      // }
       @media (any-hover: hover){
         &:hover{
           box-shadow: 0 8px 25px 0 rgba(45, 208, 56, 0.8);
@@ -199,10 +209,10 @@
       background-color: #7b519d;
       box-shadow: 0 8px 25px 0 rgba(123, 81, 157, 0.5);
 
-      &::before {
-        -webkit-mask-image: url('../img/icons.svg#viber-icon');
-        mask-image: url('../img/icons.svg#viber-icon');
-      }
+      // &::before {
+      //   -webkit-mask-image: url('../img/icons.svg#viber-icon');
+      //   mask-image: url('../img/icons.svg#viber-icon');
+      // }
       @media (any-hover: hover){
         &:hover{
           box-shadow: 0 8px 25px 0 rgba(123, 81, 157, 0.8);
@@ -214,12 +224,12 @@
       background-color: #5bbaf0;
       box-shadow: 0 8px 25px 0 rgba(91, 186, 240, 0.5);
 
-      &::before {
-        width: 16px;
-        height: 14px;
-        -webkit-mask-image: url('../img/icons.svg#telegram-icon');
-        mask-image: url('../img/icons.svg#telegram-icon');
-      }
+      // &::before {
+      //   width: 16px;
+      //   height: 14px;
+      //   -webkit-mask-image: url('../img/icons.svg#telegram-icon');
+      //   mask-image: url('../img/icons.svg#telegram-icon');
+      // }
       @media (any-hover: hover){
         &:hover{
           box-shadow: 0 8px 25px 0 rgba(91, 186, 240, 0.8);

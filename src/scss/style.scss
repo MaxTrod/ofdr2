@@ -11,13 +11,13 @@
 
 @import 'base/_icon-menu';
 
-/*--------------------------------------------------*/
+/*-------------Главная страница------------------------------------------------*/
 @import 'page-main/hero';
 
 @import 'page-main/paperwork';
+@import 'components/guarantees';
 
 @import 'page-main/educational';
-
 
 @import 'node_modules/@fancyapps/ui/dist/carousel/carousel';
 @import 'node_modules/@fancyapps/ui/dist/fancybox/fancybox';
@@ -26,8 +26,8 @@
 @import 'page-main/news-events';
 @import 'components/news-article';
 
-
-
+/*-------------Страница электробезопасности------------------------------------------------*/
+@import 'page-certification/electrical-safety';
 
 /*--------------------------------------------------*/
 @import 'components/footer';

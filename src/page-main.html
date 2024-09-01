@@ -6,12 +6,17 @@
 
 <body>
   <div class="wrapper">
-    @@include('html/_popup.html',{})
-    @@include('html/components/_header.html', {})
+    <!-- @@include('html/_popup.html',{}) -->
+    @@include('html/components/_header.html', {
+      "page": "main"
+    })
 
     <main class="page">
       @@include('html/page-main/_hero.html', {})
       @@include('html/page-main/_paperwork.html', {})
+      @@include('html/components/_guarantees.html', {
+        "visible": "sr-only"
+      })
       @@include('html/page-main/_educational.html', {})
       @@include('html/page-main/_examples.html', {})
       @@include('html/page-main/_news-events.html', {})

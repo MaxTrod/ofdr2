@@ -3,7 +3,7 @@ import * as menuCatalog from "./page-main/_menu.js";
 import * as burgerMenu from "./modules/_icon-menu.js";
 import * as dynamicAdapt from "./modules/_dynamic-adapt.js";
 import * as spoilers from "./modules/_spoilers.js";
-import * as swipers from "./modules/_swipers.js";
+// import * as swipers from "./modules/_swipers.js";
 import * as groupStatus from "./page-main/_group-status.js";
 
 isWebp.isWebp();

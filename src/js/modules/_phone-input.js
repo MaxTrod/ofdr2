@@ -1,4 +1,5 @@
 export function phoneInput () {
+  if(document.querySelector('#number')) {
   let inputPhone = document.getElementById("number");
     inputPhone.oninput = () => phoneMask(inputPhone)
     function phoneMask(inputEl) {
@@ -17,4 +18,5 @@ export function phoneInput () {
         inputEl.value = patStringArr.join('');
         n ? inputEl.setSelectionRange(n + 1, n + 1) : inputEl.setSelectionRange(17, 17)
     }
+  }
 }

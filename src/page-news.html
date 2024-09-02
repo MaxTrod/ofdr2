@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 @@include('html/components/_head.html', {
-"title" : "страница аттестации"
+"title" : "страница новостей"
 })
 
 <body>
@@ -11,6 +11,7 @@
     })
 
     <main class="page">
+      <h1 class="page__title title sr-only">Страница новостей</h1>
       <div class="page__navigation">
         <div class="container">
           <nav class="page__breadcrumbs breadcrumbs">
@@ -18,21 +19,14 @@
               <li class="breadcrumbs__item">
                 <a class="breadcrumbs__link" href="#">Главная</a>
               </li>
-              <li class="breadcrumbs__item breadcrumbs__item--certification">
-                <a class="breadcrumbs__link" href="#">Аттестация</a>
-              </li>
               <li class="breadcrumbs__item">
-                <span class="breadcrumbs__current">Аттестация по электробезопасности</span>
+                <span class="breadcrumbs__current">Новости</span>
               </li>
             </ul>
           </nav>
         </div>
       </div>
-      @@include('html/page-certification/_electrical-safety.html', {})
-      @@include('html/components/_guarantees.html', {
-        "guarantees-padding-bottom": "guarantees-padding-bottom"
-      })
-      @@include('html/page-certification/_certificate.html', {})
+      @@include('html/page-news/_blog-news.html', {})
     </main>
 
     @@include('html/components/_footer.html', {})

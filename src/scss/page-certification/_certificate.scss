@@ -1,0 +1,98 @@
+.certificate {
+  padding-top: 58px;
+  padding-bottom: 80px;
+  background-color: #86ADEF;
+  background-position: center;
+  @media (max-width:$mobile){
+    padding-top: 38px;
+    padding-bottom: 60px;
+  }
+  // .certificate__inner
+  &__inner {}
+  // .certificate__title
+  &__title {
+    margin-bottom: 22px;
+  }
+  // .certificate__form
+  &__form {}
+}
+.form-certificate {
+  // .form-certificate__info
+  &__info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: end;
+    column-gap: 30px;
+    row-gap: 17px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #678bc7;
+    @media (max-width:$tablet){
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width:$mobile){
+      grid-template-columns: 1fr;
+    }
+  }
+  // .form-certificate__column
+  &__column {}
+  &__label {
+    font-size: 17px;
+    color: #516c9a;
+    display: inline-block;
+    line-height: 1.17; /* 20/17 */
+    margin-bottom: 8px;
+  }
+  // .form-certificate__input
+  &__input {}
+  // .form-certificate__contacts
+  &__contacts {
+    padding-top: 32px;
+    display: grid;
+    grid-template-columns: 164px 164px 1fr 164px;
+    column-gap: 30px;
+    row-gap: 30px;
+    @media (max-width:$tablet){
+      grid-template-columns: 164px 164px 1fr;
+      .form-certificate__column {
+        &:last-child {
+          grid-column: span 3;
+          justify-self: center;
+        }
+      }
+    }
+    @media (max-width:$mobile){
+      grid-template-columns: 1fr 1fr;
+      column-gap: 15px;
+      .form-certificate__column {
+        &:nth-child(3) {
+          grid-column: span 2;
+        }
+        &:last-child {
+          grid-column: span 2;
+        }
+      }
+    }
+    @media (max-width:$mobileSmall){
+      grid-template-columns: 1fr;
+      .form-certificate__column {
+        &:nth-child(3) {
+          grid-column: span 1;
+        }
+        &:last-child {
+          justify-self: stretch;
+          grid-column: span 1;
+        }
+      }
+    }
+  }
+  // .form-certificate__btn
+  &__btn {
+    padding: 10px 15px;
+    font-size: 15px;
+    height: 46px;
+    width: 164px;
+    @media (max-width:$mobileSmall){
+       width: 100%; 
+    }
+  }
+}

@@ -8,7 +8,7 @@
    <link rel="icon" type="image/svg+xml" href="img/favicons/favicon.svg">
    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png" sizes="180x180">
 
-   <link rel="stylesheet" href="css/style.min.css?_v=20240901185550">
+   <link rel="stylesheet" href="css/style.min.css?_v=20240902162807">
    <title>страница аттестации</title>
 </head>
 
@@ -384,7 +384,7 @@
     </div>
   </div>
 </section>
-      <section class="guarantees">
+      <section class="guarantees guarantees-padding-bottom">
   <div class="container">
     <div class="guarantees__inner">
       <h2 class="guarantees__title title title--secondary @@visible">Какие гарантии вы получаете?</h2>
@@ -410,6 +410,60 @@
           <p class="guarantees__text">Доставляем в любой город России</p>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+      <section class="certificate" style="background-image: url('img/certificate/form-decor.png');">
+  <div class="container">
+    <div class="certificate__inner">
+      <h2 class="certificate__title title title--white">Удостоверение по безопасности</h2>
+      <form class="certificate__form form-certificate" action="#">
+        <div class="form-certificate__info">
+          <div class="form-certificate__column">
+            <label class="form-certificate__label" for="username">Ф.И.О. полностью</label>
+            <input class="form-certificate__input input" id="username" name="username" type="text" autocomplete="off" required>
+          </div>
+
+          <div class="form-certificate__column">
+            <label class="form-certificate__label" for="profession">Название должности/профессии</label>
+            <input class="form-certificate__input input" id="profession" name="profession" type="text" autocomplete="off" required>
+          </div>
+
+          <div class="form-certificate__column">
+            <label class="form-certificate__label" for="workplace">Если Вы работаете укажите место работы</label>
+            <input class="form-certificate__input input" id="workplace" name="workplace" type="text" autocomplete="off" required>
+          </div>
+
+          <div class="form-certificate__column">
+            <label class="form-certificate__label" for="group">Группа электробезопасности (2,3,4,5)</label>
+            <input class="form-certificate__input input" id="group" name="group" type="text" autocomplete="off" required>
+          </div>
+
+          <div class="form-certificate__column">
+            <label class="form-certificate__label" for="cause">Причина проверки (первичная или очередная)</label>
+            <input class="form-certificate__input input" id="cause" name="cause" type="text" autocomplete="off" required>
+          </div>
+
+          <div class="form-certificate__column">
+            <label class="form-certificate__label" for="date">Укажите дату выдачи удостоверения, которую прописать в удостоверении</label>
+            <input class="form-certificate__input input" id="date" name="date" type="text" autocomplete="off" required>
+          </div>
+        </div>
+        <div class="form-certificate__contacts">
+          <div class="form-certificate__column">
+            <input class="form-certificate__input input" id="number" name="number" type="tel" placeholder="+7(___)___-__-__" value="+7(___)___-__-__" autocomplete="off" required>
+          </div>
+          <div class="form-certificate__column">
+            <input class="form-certificate__input input" id="mail" name="mail" type="email" placeholder="Email" autocomplete="off" required>
+          </div>
+          <div class="form-certificate__column">
+            <input class="form-certificate__input input" id="address" name="address" type="text" placeholder="Адрес доставки готовых документов (город, адрес, номер телефона, ФИО)" autocomplete="off" required>
+          </div>
+          <div class="form-certificate__column">
+            <button class="form-certificate__btn btn" type="submit">Отправить заявку</button>
+          </div>
+        </div>
+      </form>
     </div>
   </div>
 </section>
@@ -502,7 +556,7 @@
   <div class="footer__copy">Copyright 2019. Все права защищены</div>
 </footer>
   </div>
-  <script src="js/app.min.js?_v=20240901185550"></script>
+  <script src="js/app.min.js?_v=20240902162807"></script>
 </body>
 
 </html>

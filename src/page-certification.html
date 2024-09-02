@@ -29,7 +29,10 @@
         </div>
       </div>
       @@include('html/page-certification/_electrical-safety.html', {})
-      @@include('html/components/_guarantees.html', {})
+      @@include('html/components/_guarantees.html', {
+        "guarantees-padding-bottom": "guarantees-padding-bottom"
+      })
+      @@include('html/page-certification/_certificate.html', {})
     </main>
 
     @@include('html/components/_footer.html', {})

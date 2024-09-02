@@ -2,6 +2,9 @@
   background-color: $bg-secondary;
   &__inner {
     padding: 40px 12px;
+    .guarantees-padding-bottom & {
+      padding: 40px 12px 75px 12px;
+    }
   }
   &__title {
     margin-bottom: 52px;

@@ -5,6 +5,7 @@ import * as dynamicAdapt from "./modules/_dynamic-adapt.js";
 import * as spoilers from "./modules/_spoilers.js";
 // import * as swipers from "./modules/_swipers.js";
 import * as groupStatus from "./page-main/_group-status.js";
+import * as phoneInput from "./modules/_phone-input.js";
 
 isWebp.isWebp();
 
@@ -23,6 +24,8 @@ import "./modules/_swipers.js";
 // import './modules/_popup.js';
 
 import "./modules/_fancyapps.js";
+
+phoneInput.phoneInput();
 
 // core version + navigation, pagination modules:
 // import Swiper from 'swiper';

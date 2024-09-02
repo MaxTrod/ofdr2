@@ -134,6 +134,9 @@ body {
   @extend %gilroy-900;
   font-size: 40px;
   line-height: 1.27; /* 51/40 */
+  &--white {
+    color: $bg;
+  }
   &--secondary {
     font-size: 36px;
     text-align: center;
@@ -225,6 +228,16 @@ body {
 
   &:active {
     box-shadow: none;
+  }
+}
+
+.input {
+  width: 100%;
+  height: 46px;
+  padding: 0 15px;
+  &::placeholder {
+    font-size: 14px;
+    color: #7b7b7b;
   }
 }
 

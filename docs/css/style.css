@@ -147,6 +147,8 @@ body {
 }
 
 .item-footer__title,
+.contacts__qr-title,
+.contacts__text,
 .pagination-blog__link,
 .info-safety h3,
 .info-safety h2,
@@ -337,6 +339,70 @@ body.body-lock {
   opacity: 0.5;
 }
 
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 18px;
+     -moz-column-gap: 18px;
+          column-gap: 18px;
+}
+
+.social__item {
+  width: 43px;
+  height: 43px;
+}
+
+.social__link {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.social__link svg {
+  width: 19px;
+  height: 19px;
+}
+
+.social__link svg path {
+  fill: #fff;
+}
+
+.social__link--whatsapp {
+  background-color: #2dd038;
+  -webkit-box-shadow: 0 8px 25px 0 rgba(45, 208, 56, 0.5);
+          box-shadow: 0 8px 25px 0 rgba(45, 208, 56, 0.5);
+}
+
+.social__link--viber {
+  background-color: #7b519d;
+  -webkit-box-shadow: 0 8px 25px 0 rgba(123, 81, 157, 0.5);
+          box-shadow: 0 8px 25px 0 rgba(123, 81, 157, 0.5);
+}
+
+.social__link--telegram {
+  background-color: #5bbaf0;
+  -webkit-box-shadow: 0 8px 25px 0 rgba(91, 186, 240, 0.5);
+          box-shadow: 0 8px 25px 0 rgba(91, 186, 240, 0.5);
+}
+
+.social__link--whatsapp:active,
+.social__link--viber:active,
+.social__link--telegram:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .btn {
   display: inline-block;
   border-radius: 3px;
@@ -389,6 +455,10 @@ body.body-lock {
   width: 100%;
   height: 46px;
   padding: 0 15px;
+  -webkit-transition: -webkit-box-shadow 0.3s;
+  transition: -webkit-box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
 }
 
 .input::-webkit-input-placeholder {
@@ -414,6 +484,11 @@ body.body-lock {
 .input::placeholder {
   font-size: 14px;
   color: #7b7b7b;
+}
+
+.input:focus {
+  -webkit-box-shadow: 0 0 0 2px rgb(53, 53, 242);
+          box-shadow: 0 0 0 2px rgb(53, 53, 242);
 }
 
 .phone,
@@ -603,6 +678,12 @@ body.body-lock {
           column-gap: 55px;
 }
 
+.top-header__logo .logo {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 136px;
+          flex: 0 0 136px;
+}
+
 .top-header__textlogo {
   line-height: 1.14;
   font-size: 14px;
@@ -619,70 +700,6 @@ body.body-lock {
   width: 2px;
   height: 85%;
   background-color: #89afef;
-}
-
-.social-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-column-gap: 18px;
-     -moz-column-gap: 18px;
-          column-gap: 18px;
-}
-
-.social-header__item {
-  width: 43px;
-  height: 43px;
-}
-
-.social-header__link {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.social-header__link svg {
-  width: 19px;
-  height: 19px;
-}
-
-.social-header__link svg path {
-  fill: #fff;
-}
-
-.social-header__link--whatsapp {
-  background-color: #2dd038;
-  -webkit-box-shadow: 0 8px 25px 0 rgba(45, 208, 56, 0.5);
-          box-shadow: 0 8px 25px 0 rgba(45, 208, 56, 0.5);
-}
-
-.social-header__link--viber {
-  background-color: #7b519d;
-  -webkit-box-shadow: 0 8px 25px 0 rgba(123, 81, 157, 0.5);
-          box-shadow: 0 8px 25px 0 rgba(123, 81, 157, 0.5);
-}
-
-.social-header__link--telegram {
-  background-color: #5bbaf0;
-  -webkit-box-shadow: 0 8px 25px 0 rgba(91, 186, 240, 0.5);
-          box-shadow: 0 8px 25px 0 rgba(91, 186, 240, 0.5);
-}
-
-.social-header__link--whatsapp:active,
-.social-header__link--viber:active,
-.social-header__link--telegram:active {
-  -webkit-box-shadow: none;
-          box-shadow: none;
 }
 
 .contacts-header {
@@ -1098,10 +1115,18 @@ body.body-lock {
   border: 2px solid transparent;
 }
 
+.educational-programs__pagination .swiper-pagination-bullet:active {
+  border-color: transparent;
+}
+
 .educational-programs__pagination .swiper-pagination-bullet-active {
   border: 2px solid #84aaed;
   width: 14px;
   height: 14px;
+}
+
+.educational-programs__pagination:focus .swiper-pagination-bullet {
+  border: 2px solid #87b0ee;
 }
 
 .slide-educational__card {
@@ -4270,6 +4295,129 @@ html.with-fancybox body.hide-scrollbar {
   border-color: transparent;
 }
 
+/*-------------Страница контактов------------------------------------------------*/
+
+.contacts {
+  padding-top: 20px;
+  padding-bottom: 70px;
+}
+
+.contacts__wrap {
+  padding-top: 50px;
+  max-width: 1637px;
+  margin: -50px auto 0 auto;
+  background-size: 964px 544px;
+  background-position: left top;
+  background-repeat: no-repeat;
+}
+
+.contacts__inner {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr auto;
+  grid-template-columns: 1fr auto;
+  gap: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contacts__title {
+  text-align: left;
+  margin-bottom: 12px;
+}
+
+.contacts__text {
+  font-size: 17px;
+  line-height: 1.18;
+}
+
+.contacts__text:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.contacts__links {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  row-gap: 15px;
+}
+
+.contacts__links:not(:last-child) {
+  margin-bottom: 45px;
+}
+
+.contacts__social:not(:last-child) {
+  margin-bottom: 50px;
+}
+
+.contacts__qr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contacts__qr-image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 166px;
+          flex: 0 0 166px;
+  width: 166px;
+  height: 162px;
+}
+
+.contacts__body {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding-left: 31px;
+  padding-top: 23px;
+}
+
+.contacts__qr-title:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.contacts__qr-text {
+  font-size: 16px;
+  line-height: 1.37;
+}
+
+.form-contacts {
+  padding: 25px 66px 34px 66px;
+  background-color: #87b0ee;
+}
+
+.form-contacts__title {
+  font-size: 30px;
+}
+
+.form-contacts__title:not(:last-child) {
+  margin-bottom: 28px;
+}
+
+.form-contacts__body {
+  display: -ms-grid;
+  display: grid;
+  gap: 14px;
+}
+
+.form-contacts__column:last-child {
+  text-align: center;
+}
+
+.form-contacts__input--docs {
+  height: 120px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.form-contacts__btn {
+  width: 195px;
+  padding: 10px 20px;
+}
+
 /*--------------------------------------------------*/
 
 .footer {
@@ -4465,6 +4613,12 @@ html.with-fancybox body.hide-scrollbar {
     padding-top: 100px;
   }
 
+  .social {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+
   .header__hidden-menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4496,12 +4650,6 @@ html.with-fancybox body.hide-scrollbar {
     position: relative;
     z-index: 14;
     margin-top: auto;
-  }
-
-  .social-header {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
   }
 
   .contacts-header {
@@ -4719,6 +4867,35 @@ html.with-fancybox body.hide-scrollbar {
         justify-self: center;
   }
 
+  .contacts__wrap {
+    background-size: contain;
+  }
+
+  .contacts__qr {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 15px;
+  }
+
+  .contacts__qr-image {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+
+  .contacts__body {
+    padding-left: 0;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+
+  .form-contacts {
+    padding: 15px 56px 24px 56px;
+  }
+
   .footer__main {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
@@ -4798,6 +4975,12 @@ html.with-fancybox body.hide-scrollbar {
     -webkit-column-gap: 30px;
        -moz-column-gap: 30px;
             column-gap: 30px;
+  }
+
+  .top-header__logo .logo {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100px;
+            flex: 0 0 100px;
   }
 
   .top-header__textlogo::before {
@@ -5004,6 +5187,27 @@ html.with-fancybox body.hide-scrollbar {
   .form-certificate__contacts .form-certificate__column:last-child {
     -ms-grid-column-span: 2;
     grid-column: span 2;
+  }
+
+  .contacts__inner {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .contacts__text:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .contacts__links:not(:last-child) {
+    margin-bottom: 25px;
+  }
+
+  .contacts__social:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  .form-contacts {
+    padding: 15px 20px;
   }
 
   .item-footer__title {
@@ -5217,6 +5421,10 @@ html.with-fancybox body.hide-scrollbar {
   .form-certificate__btn {
     width: 100%;
   }
+
+  .form-contacts__btn {
+    width: 100%;
+  }
 }
 
 @media (any-hover: hover) {
@@ -5232,6 +5440,21 @@ html.with-fancybox body.hide-scrollbar {
 
   .logo:hover {
     opacity: 0.7;
+  }
+
+  .social__link--whatsapp:hover {
+    -webkit-box-shadow: 0 8px 25px 0 rgba(45, 208, 56, 0.8);
+            box-shadow: 0 8px 25px 0 rgba(45, 208, 56, 0.8);
+  }
+
+  .social__link--viber:hover {
+    -webkit-box-shadow: 0 8px 25px 0 rgba(123, 81, 157, 0.8);
+            box-shadow: 0 8px 25px 0 rgba(123, 81, 157, 0.8);
+  }
+
+  .social__link--telegram:hover {
+    -webkit-box-shadow: 0 8px 25px 0 rgba(91, 186, 240, 0.8);
+            box-shadow: 0 8px 25px 0 rgba(91, 186, 240, 0.8);
   }
 
   .btn:hover {
@@ -5252,19 +5475,8 @@ html.with-fancybox body.hide-scrollbar {
             box-shadow: 0 8px 18px 0 rgba(135, 176, 238, 0.9);
   }
 
-  .social-header__link--whatsapp:hover {
-    -webkit-box-shadow: 0 8px 25px 0 rgba(45, 208, 56, 0.8);
-            box-shadow: 0 8px 25px 0 rgba(45, 208, 56, 0.8);
-  }
-
-  .social-header__link--viber:hover {
-    -webkit-box-shadow: 0 8px 25px 0 rgba(123, 81, 157, 0.8);
-            box-shadow: 0 8px 25px 0 rgba(123, 81, 157, 0.8);
-  }
-
-  .social-header__link--telegram:hover {
-    -webkit-box-shadow: 0 8px 25px 0 rgba(91, 186, 240, 0.8);
-            box-shadow: 0 8px 25px 0 rgba(91, 186, 240, 0.8);
+  .educational-programs__pagination .swiper-pagination-bullet:hover {
+    border: 2px solid #84aaed;
   }
 
   .slide-educational__card:hover {

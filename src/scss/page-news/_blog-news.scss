@@ -12,6 +12,7 @@
   &__articles {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
     @media (max-width:$pc){
       grid-template-columns: repeat(3, 1fr);
     }
@@ -21,7 +22,6 @@
     @media (max-width: 576px){
       grid-template-columns: 1fr;
     }
-    gap: 30px;
     &:not(:last-child) {
       margin-bottom: 55px;
     }

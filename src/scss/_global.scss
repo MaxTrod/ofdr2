@@ -4,7 +4,6 @@ body {
   line-height: 1.33;
   color: $main;
   background-color: $bg;
-  min-width: 375px;
   &.body-lock {
     overflow: clip;
   }

@@ -27,6 +27,8 @@ import "./modules/_fancyapps.js";
 
 phoneInput.phoneInput();
 
+import './modules/_lazy-load.js';
+
 // core version + navigation, pagination modules:
 // import Swiper from 'swiper';
 // import { Navigation, Pagination } from 'swiper/modules';

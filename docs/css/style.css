@@ -47,6 +47,7 @@ html,
 body {
   height: 100%;
   line-height: 1;
+  min-width: 375px;
 }
 
 textarea,
@@ -203,7 +204,6 @@ body {
   line-height: 1.33;
   color: #333;
   background-color: #fff;
-  min-width: 375px;
 }
 
 body.body-lock {
@@ -610,6 +610,7 @@ body.body-lock {
 .header {
   position: absolute;
   width: 100%;
+  min-width: 375px;
   height: auto;
   top: 0;
   left: 0;
@@ -739,6 +740,41 @@ body.body-lock {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 15px;
+}
+
+.bottom-header__item--submenu .bottom-header__link {
+  position: relative;
+  padding-right: 25px;
+}
+
+.bottom-header__item--submenu .bottom-header__link::before {
+  content: "";
+  position: absolute;
+  background-color: #333;
+  width: 17px;
+  height: 17px;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%) rotate(90deg);
+      -ms-transform: translateY(-50%) rotate(90deg);
+          transform: translateY(-50%) rotate(90deg);
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-image: url("../img/icons.svg#check-icon");
+  mask-image: url("../img/icons.svg#check-icon");
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.bottom-header__item--submenu .bottom-header__link--active::before {
+  -webkit-transform: translateY(-50%) rotate(90deg) scaleX(-1);
+      -ms-transform: translateY(-50%) rotate(90deg) scaleX(-1);
+          transform: translateY(-50%) rotate(90deg) scaleX(-1);
+  background-color: #87b0ee;
 }
 
 .bottom-header__link {
@@ -879,8 +915,8 @@ body.body-lock {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
   z-index: 2;
+  position: relative;
 }
 
 .hero__title:not(:last-child) {
@@ -4674,6 +4710,13 @@ html.with-fancybox body.hide-scrollbar {
     gap: 20px;
   }
 
+  .bottom-header__item--submenu .bottom-header__link::before {
+    background-color: #fff;
+    -webkit-transform: translateY(-50%) rotate(0deg);
+        -ms-transform: translateY(-50%) rotate(0deg);
+            transform: translateY(-50%) rotate(0deg);
+  }
+
   .bottom-header__link {
     color: #fff;
   }
@@ -4702,6 +4745,8 @@ html.with-fancybox body.hide-scrollbar {
     margin-bottom: 20px;
     position: relative;
     padding-left: 25px;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
   }
 
   .sub-menu-catalog__close::before {
@@ -4727,6 +4772,8 @@ html.with-fancybox body.hide-scrollbar {
     -webkit-mask-image: url("../img/icons.svg#arrow-icon");
     mask-image: url("../img/icons.svg#arrow-icon");
     background-color: #fff;
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
   }
 
   .sub-menu-catalog__block--open {
@@ -4993,34 +5040,8 @@ html.with-fancybox body.hide-scrollbar {
     gap: 0;
   }
 
-  .bottom-header__item--submenu {
-    position: relative;
-  }
-
-  .bottom-header__item--submenu::before {
-    content: "";
-    position: absolute;
-    pointer-events: none;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-mask-size: cover;
-    mask-size: cover;
-    -webkit-mask-position: center;
-    mask-position: center;
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
+  .bottom-header__item--submenu .bottom-header__link::before {
     right: 15px;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
-    width: 17px;
-    height: 17px;
-    -webkit-mask-image: url("../img/icons.svg#check-icon");
-    mask-image: url("../img/icons.svg#check-icon");
-    background-color: #fff;
   }
 
   .bottom-header__link {
@@ -5475,6 +5496,18 @@ html.with-fancybox body.hide-scrollbar {
             box-shadow: 0 8px 18px 0 rgba(135, 176, 238, 0.9);
   }
 
+  .bottom-header__item--submenu .bottom-header__link:hover::before {
+    background-color: #87b0ee;
+  }
+
+  .sub-menu-catalog__close:hover {
+    color: #87b0ee;
+  }
+
+  .sub-menu-catalog__close:hover::before {
+    background-color: #87b0ee;
+  }
+
   .educational-programs__pagination .swiper-pagination-bullet:hover {
     border: 2px solid #84aaed;
   }
@@ -5513,6 +5546,14 @@ html.with-fancybox body.hide-scrollbar {
   }
 }
 
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .no-webp .hero__decor{
+    background-image: url("../img/hero/group@2x.png"); }
+
+  .no-webp .hero__decor{
+    background-image: url("../img/hero/group@2x.png"); }
+}
+
 @media (hover: hover) {
   .f-button:hover:not([disabled]) {
     color: var(--f-button-hover-color);
@@ -5528,3 +5569,13 @@ html.with-fancybox body.hide-scrollbar {
 .webp .hero__inner::before{ background: url(../img/hero/bg.webp) top left/cover no-repeat; }
 
 .webp .banner-safery::before{ background: url(../img/electrical-safety/decor.webp) 0 0/cover no-repeat; }
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi){
+
+  .webp .hero__decor{ background-image: url(../img/hero/group@2x.webp); }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi){
+
+  .webp .hero__decor{ background-image: url(../img/hero/group@2x.webp); }
+}

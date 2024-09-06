@@ -1,6 +1,7 @@
 .header {
   position: absolute;
   width: 100%;
+  min-width: 375px;
   height: auto;
   top: 0;
   left: 0;
@@ -82,9 +83,6 @@
     align-items: center;
     justify-content: space-between;
     column-gap: 15px;
-    @media (max-width:$mobileSmall){
-       
-    }
   }
 
   // .top-header__logo
@@ -92,12 +90,15 @@
     display: flex;
     align-items: center;
     column-gap: 55px;
-    @media (max-width:$mobile){
-       justify-content: space-between; 
-       column-gap: 30px;
-    }
     .logo {
-      
+      flex: 0 0 136px;
+    }
+    @media (max-width:$mobile){
+      justify-content: space-between; 
+      column-gap: 30px;
+      .logo {
+        flex: 0 0 100px;
+      }
     }
   }
 
@@ -155,101 +156,6 @@
   &__icon {}
 }
 
-.social-header {
-  display: flex;
-  column-gap: 18px;
-  @media (max-width: 1070px){
-    align-self: center;
-  }
-
-  // .social-header__item
-  &__item {
-    width: 43px;
-    height: 43px;
-  }
-
-  // .social-header__link
-  &__link {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    svg {
-      width: 19px;
-      height: 19px;
-      path {
-        fill: $bg;
-      }
-    }
-
-    &::before {
-      // @extend %pseudo-xy;
-      // @extend %svg-color;
-      // width: 19px;
-      // height: 19px;
-      // background-color: $bg;
-    }
-
-    &--whatsapp {
-      background-color: #2dd038;
-      box-shadow: 0 8px 25px 0 rgba(45, 208, 56, 0.5);
-
-      // &::before {
-      //   -webkit-mask-image: url('../img/icons.svg#whatsapp-icon');
-      //   mask-image: url('../img/icons.svg#whatsapp-icon');
-      // }
-      @media (any-hover: hover){
-        &:hover{
-          box-shadow: 0 8px 25px 0 rgba(45, 208, 56, 0.8);
-        }
-      }
-    }
-
-    &--viber {
-      background-color: #7b519d;
-      box-shadow: 0 8px 25px 0 rgba(123, 81, 157, 0.5);
-
-      // &::before {
-      //   -webkit-mask-image: url('../img/icons.svg#viber-icon');
-      //   mask-image: url('../img/icons.svg#viber-icon');
-      // }
-      @media (any-hover: hover){
-        &:hover{
-          box-shadow: 0 8px 25px 0 rgba(123, 81, 157, 0.8);
-        }
-      }
-    }
-
-    &--telegram {
-      background-color: #5bbaf0;
-      box-shadow: 0 8px 25px 0 rgba(91, 186, 240, 0.5);
-
-      // &::before {
-      //   width: 16px;
-      //   height: 14px;
-      //   -webkit-mask-image: url('../img/icons.svg#telegram-icon');
-      //   mask-image: url('../img/icons.svg#telegram-icon');
-      // }
-      @media (any-hover: hover){
-        &:hover{
-          box-shadow: 0 8px 25px 0 rgba(91, 186, 240, 0.8);
-        }
-      }
-    }
-
-    &--whatsapp,
-    &--viber,
-    &--telegram {
-      &:active {
-        box-shadow: none;
-      }
-    }
-  }
-}
 
 .contacts-header {
   display: flex;
@@ -364,29 +270,76 @@
 
   // .bottom-header__item
   &__item {
+    
     &--submenu {
-      @media (max-width: $mobile){
+      .bottom-header__link {
         position: relative;
+        padding-right: 25px;
         &::before {
           content: '';
           position: absolute;
-          pointer-events: none;
-          flex-direction: column;
+          background-color: $main;
+          width: 17px;
+          height: 17px;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%) rotate(90deg);
           -webkit-mask-size: cover;
           mask-size: cover;
           -webkit-mask-position: center;
           mask-position: center;
           -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
-          right: 15px;
-          top: 50%;
-          transform: translateY(-50%);
-          width: 17px;
-          height: 17px;
           -webkit-mask-image: url('../img/icons.svg#check-icon');
           mask-image: url('../img/icons.svg#check-icon');
-          background-color: $bg;
+          transition: background-color 0.3s;
         }
+        &--active {
+          &::before {
+            transform: translateY(-50%) rotate(90deg) scaleX(-1);
+            background-color: $accent;
+          }
+        }
+        @media (max-width: 1070px){
+          &::before {
+            background-color: $bg;
+            transform: translateY(-50%) rotate(0deg);
+          }
+        }
+        @media (max-width:$mobile){
+          &::before {
+            right: 15px;
+          }
+        }
+        @media (any-hover: hover){
+          &:hover{
+            &::before {
+              background-color: $accent;
+            }
+          }
+        }
+      }
+      @media (max-width: $mobile){
+        // &::before {
+        //   content: '';
+        //   position: absolute;
+        //   pointer-events: none;
+        //   flex-direction: column;
+        //   -webkit-mask-size: cover;
+        //   mask-size: cover;
+        //   -webkit-mask-position: center;
+        //   mask-position: center;
+        //   -webkit-mask-repeat: no-repeat;
+        //   mask-repeat: no-repeat;
+        //   right: 15px;
+        //   top: 50%;
+        //   transform: translateY(-50%);
+        //   width: 17px;
+        //   height: 17px;
+        //   -webkit-mask-image: url('../img/icons.svg#check-icon');
+        //   mask-image: url('../img/icons.svg#check-icon');
+        //   background-color: $bg;
+        // }
       }
     }
   }
@@ -458,6 +411,7 @@
       margin-bottom: 20px;
       position: relative;
       padding-left: 25px;
+      transition: color 0.3s;
       &::before {
         content: '';
         position: absolute;
@@ -476,6 +430,7 @@
         -webkit-mask-image: url('../img/icons.svg#arrow-icon');
         mask-image: url('../img/icons.svg#arrow-icon');
         background-color: $bg;
+        transition: background-color 0.3s;
       }
     }
     @media (max-width:$mobile){
@@ -489,6 +444,14 @@
       transition: background-color 0.3s;
       &::before {
         left: 15px;
+      }
+    }
+    @media (any-hover: hover){
+      &:hover{
+        color: $accent;
+        &::before {
+          background-color: $accent;
+        }
       }
     }
   }

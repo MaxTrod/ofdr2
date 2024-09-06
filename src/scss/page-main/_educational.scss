@@ -36,11 +36,24 @@
       border-radius: 50%;
       transition: border 0.3s, width 0.3s, height 0.3s;
       border: 2px solid transparent;
+      @media (any-hover: hover){
+        &:hover{
+          border: 2px solid #84aaed;
+        }
+      }
+      &:active {
+        border-color: transparent;
+      }
     }
     .swiper-pagination-bullet-active {
       border: 2px solid #84aaed;
       width: 14px;
       height: 14px;
+    }
+    &:focus {
+      .swiper-pagination-bullet {
+        border: 2px solid $accent;
+      }
     }
   }
 }
